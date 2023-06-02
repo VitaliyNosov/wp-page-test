@@ -194,6 +194,7 @@ nav ul li a {
 .slider-price-menu-block {
   display: flex;
   justify-content: space-between;
+  margin-top: 100px;
 }
 
 .slider-block {
@@ -204,4 +205,110 @@ nav ul li a {
 .order-block {
   width: 30%;
   border: 1px solid #000;
+}
+
+.options-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price-block span {
+  font-size: 34px;
+}
+.price-block p {
+  font-size: 18px;
+  color: #9e9e9e;
+}
+
+.slider-section-two {
+  border: 1px solid #9e9e9e;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+footer {
+  background-color: #F6F6F6;
+}
+
+.footer-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us-block {
+  width: 30%;
+}
+.about-us-block h3 {
+  font-size: 34px;
+}
+.about-us-block p {
+  font-size: 18px;
+}
+
+.footer-menu-block {
+  width: 30%;
+}
+.footer-menu-block h3 {
+  font-size: 34px;
+}
+.footer-menu-block ul li {
+  font-size: 18px;
+}
+.footer-menu-block ul li a {
+  color: #1d1d1f;
+}
+
+.form-socila-block {
+  width: 30%;
+}
+.form-socila-block h3 {
+  font-size: 34px;
+}
+.form-socila-block form {
+  display: flex;
+  flex-direction: column;
+}
+.form-socila-block form input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #323232;
+  background-color: #F6F6F6;
+  padding: 20px;
+}
+.form-socila-block button {
+  width: 100%;
+  background-color: #323232;
+  color: #fff;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.social-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #323232;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-black-block {
+  background-color: #1D1D1F;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }/*# sourceMappingURL=style.css.map */
