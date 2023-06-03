@@ -1,6 +1,12 @@
 @import "top-icons-style"
 @import "radio-button-style"
 @import "action-order-block-style.sass"
+@import "popup-style.sass"
+@import "a-hover-style.sass"
+@import "search-input-style.sass"
+@import "icon-counter-style.sass"
+
+
 
 body
     padding: 0px
@@ -17,8 +23,9 @@ a
     text-decoration: none
 
 .container 
-    width: 1116px
+    max-width: 1116px
     margin: 0 auto
+    // padding: 40px
 
 .header-section 
     display: flex
@@ -46,7 +53,7 @@ nav ul
         padding-bottom: 20px !important 
         a 
             font-family: "Lato"
-            font-size: 18px
+            font-size: 18px !important
             font-weight: normal
             font-style: normal
             color: #000000
@@ -103,9 +110,10 @@ footer
         font-size: 34px
     ul
         li
-            font-size: 18px
             a 
                 color: #1d1d1f
+                font-size: 18px !important
+
 
 .form-socila-block
     width: 30%

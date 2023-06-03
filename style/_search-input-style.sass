@@ -1,0 +1,34 @@
+input
+  border: none
+  border-bottom: 1px solid #000
+
+.search-container
+  position: relative
+  display: inline-block
+
+#search-icon
+  width: 20px
+  height: 20px
+  cursor: pointer
+  position: absolute
+  left: 0
+  top: 50%
+  transform: translateY(-50%)
+
+#search-field
+  width: 0
+  padding: 0
+  transition: width 0.3s ease
+  position: absolute
+  margin-top: 5px
+  top: 50%
+  left: 40px
+
+  /* Расстояние между иконкой и полем поиска
+  transform: translateY(-50%)
+
+  &.active
+    width: 200px
+
+    /* Ширина развернутого поля поиска
+    padding: 5px

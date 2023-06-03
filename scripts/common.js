@@ -26,3 +26,49 @@ function toggleElement() {
    }
 }
 
+
+// popup
+
+var description = document.getElementById("description");
+var isDescriptionVisible = false;
+
+function toggleDescription() {
+    if (!isDescriptionVisible) {
+        description.style.display = "block";
+        isDescriptionVisible = true;
+    } else {
+        description.style.display = "none";
+        isDescriptionVisible = false;
+    }
+}
+
+// search
+
+const searchIcon = document.getElementById("search-icon");
+const searchField = document.getElementById("search-field");
+
+searchIcon.addEventListener("click", function() {
+  searchField.classList.toggle("active");
+});
+
+
+// icons counter
+
+let count = 0;
+const counterElementIcon = document.getElementById('counter');
+const counterElementValue = document.getElementById('counterValue');
+
+function incrementCounter() {
+  count++;
+  if (count !== 0) {
+    counterElementIcon.textContent = count.toString();
+    counterElementValue.textContent = count.toString();
+    counterElementValue.style.display = 'inline';
+  } else {
+    counterElementValue.style.display = 'none';
+  }
+}
+
+
+
+

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wp-page-test</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css'>
+    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css'> -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -26,9 +27,16 @@
                     <img src="icons/svg/icon-mail-2.svg" alt="Bag Icon" class="filled">
                   </div>
                   
-                  <div class="icon icon-search">
+                  <!-- <div class="icon icon-search">
                     <img src="icons/svg/icon-search.svg" alt="User Icon" class="outline">
                     <img src="icons/svg/icon-search-2.svg" alt="User Icon" class="filled">
+                  </div> -->
+                  <div class="search-container">
+                    <input type="text" id="search-field" placeholder="Search">
+                    <div class="icon icon-search" id="search-icon">
+                        <img src="icons/svg/icon-search.svg" alt="User Icon" class="outline">
+                        <img src="icons/svg/icon-search-2.svg" alt="User Icon" class="filled">
+                      </div>
                   </div>
             </div>
                 <div class="logo-block">
@@ -44,6 +52,7 @@
                   <div class="icon icon-bag">
                     <img src="icons/svg/icon-bag.svg" alt="Bag Icon" class="outline">
                     <img src="icons/svg/icon-bag-2.svg" alt="Bag Icon" class="filled">
+                    <div class="counter" id="counter"></div>
                   </div>
                   <div class="icon icon-heart">
                     <img src="icons/svg/icon-heart.svg" alt="Heart Icon" class="outline">
@@ -72,6 +81,28 @@
      </div>
     </header>
      <!-- menu section -->
+     <!-- popup block -->
+    <div id="description" class="hidden">
+        <div class="container">
+            <div class="popup-block">
+                <div class="description">
+                    <p>
+                        You added Happy – Lucky Ring to your shopping cart
+                    </p>
+                </div>
+                <div class="proceed-checkout">
+                    <div class="block-number-goods">
+                        <img src="icons/svg/icon-bug-3.svg" alt="#">
+                        <span id="counterValue">0</span>
+                    </div>
+                    <div class="checkout-button">
+                        <a href="#">Proceed to Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- popup block -->
      <!-- slider-price-menu-block -->
     <div class="container">
         <div class="slider-price-menu-block">
@@ -96,19 +127,23 @@
                     <div class="color-options">
                         <h3>colour options:</h3>
                         <div class="radio-buttons">
-                          <div class="swatch gray">
-                            <input type="radio" name="swatch_demo" id="swatch_2" value="2" />
-                            <label for="swatch_2"><i class="icon ion-ios-checkmark"></i></label>
+                            <div class="swatch gray">
+                              <input type="radio" name="swatch_demo" id="swatch_2" value="2" />
+                              <!-- <label for="swatch_2"><i class="icon ion-ios-checkmark"></i></label> -->
+                              <label for="swatch_2"><i class="icon ion-plus-round"></i></label>
+                        
+                            </div>
+                            <div class="swatch orange">
+                              <input type="radio" name="swatch_demo" id="swatch_3" value="3" />
+                              <!-- <label for="swatch_3"><i class="icon ion-ios-checkmark"></i></label> -->
+                              <label for="swatch_3"><i class="icon ion-plus-round"></i></label>
+                            </div>
+                            <div class="swatch pink">
+                              <input type="radio" name="swatch_demo" id="swatch_1" value="1" checked />
+                              <!-- <label for="swatch_1"><i class="icon ion-ios-checkmark"></i></label> -->
+                              <label for="swatch_1"><i class="icon ion-plus-round"></i></label>
+                            </div>
                           </div>
-                          <div class="swatch orange">
-                            <input type="radio" name="swatch_demo" id="swatch_3" value="3" />
-                            <label for="swatch_3"><i class="icon ion-ios-checkmark"></i></label>
-                          </div>
-                          <div class="swatch pink">
-                            <input type="radio" name="swatch_demo" id="swatch_1" value="1" checked />
-                            <label for="swatch_1"><i class="icon ion-ios-checkmark"></i></label>
-                          </div>
-                        </div>
                       </div>
                       <div class="price-block">
                         <span>£2,400</span>
@@ -120,7 +155,7 @@
 
                     <div class="select-button-content">
                         <div class="button-block">
-                          <button class="button-action">Size Guide</button>
+                          <button onclick="toggleDescription()" class="button-action">Size Guide</button>
                           <button id="myButton" onclick="toggleElement()" class="button-action">select size</button>
                         </div>
                             <div class="dropdown">
@@ -132,7 +167,7 @@
                                 <option>О</option>
                                 <option>P</option>
                               </select>
-                            <button class="button">Add to Bag</button>
+                            <button class="button" onclick="incrementCounter()">Add to Bag</button>
                           </div>
                       </div> 
 
