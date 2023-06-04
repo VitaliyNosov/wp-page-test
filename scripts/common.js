@@ -139,41 +139,40 @@ photoBlock.addEventListener('mouseleave', function() {
 
 
 
+// hover image
 
 
-// cart functions
-
-
-// var productCard = document.querySelector('.product-card');
-// var image = productCard.querySelector('img');
-
-// productCard.addEventListener('mouseover', function() {
-//   image.src = './img/1_5.png';
-// });
-
-// productCard.addEventListener('mouseout', function() {
-//   image.src = './img/2.png';
-// });
-
-
-
-// Получаем ссылки на изображения иконок
-
-
-const outlineIcon = document.querySelector('.icon-heart .outline');
-const filledIcon = document.querySelector('.icon-heart .filled');
-
-// Добавляем обработчик события на клик по иконке
-outlineIcon.addEventListener('click', function() {
-      // Скрываем иконку 'outline'
-    outlineIcon.style.display = 'none';
-      // Показываем иконку 'filled'
-    filledIcon.style.display = 'inline-block';
+document.querySelectorAll('.hover-image').forEach(function(element) {
+  element.style.display = 'none';
+  });
+  
+document.querySelectorAll('.product-card-img').forEach(function(element) {
+  element.addEventListener('mouseenter', function() {
+  var hoverImage = this.querySelector('.hover-image');
+  var mainImage = this.querySelector('img:not(.hover-image)');
+  mainImage.style.display = 'none';
+  hoverImage.style.display = 'block';
+});
+  
+element.addEventListener('mouseleave', function() {
+  var hoverImage = this.querySelector('.hover-image');
+  var mainImage = this.querySelector('img:not(.hover-image)');
+  mainImage.style.display = 'block';
+  hoverImage.style.display = 'none';
+  });
 });
 
-filledIcon.addEventListener('click', function() {
-    filledIcon.style.display = 'none';
-    outlineIcon.style.display = 'inline-block';
+
+// icon checked
+
+  
+document.querySelectorAll('.icon-checked').forEach(function(element) {
+  element.addEventListener('click', function() {
+  var filledIcon = this.querySelector('.filled');
+  var outlineIcon = this.querySelector('.outline');
+  filledIcon.style.display = filledIcon.style.display === 'none' ? 'block' : 'none';
+  outlineIcon.style.display = outlineIcon.style.display === 'none' ? 'block' : 'none';
+    });
 });
 
-console.log("123");
+
