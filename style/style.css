@@ -408,6 +408,34 @@ input {
   color: #fff;
 }
 
+.slider-nav .slick {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.slider-nav .slick-slide {
+  margin: 0 20px;
+}
+.slider-nav .slick-list {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.slider-two .slick {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.slider-two .slick-slide {
+  margin: 0 20px;
+}
+.slider-two .slick-list {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
 .photo-block {
   border: 1px solid #C8C8C8;
   position: relative;
