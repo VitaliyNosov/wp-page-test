@@ -70,29 +70,6 @@ function incrementCounter() {
 }
 
 
-// // slider one
-
-// $('.slider-for').slick({
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   arrows: false,
-//   fade: true,
-//   asNavFor: '.slider-nav'
-// });
-// $('.slider-nav').slick({
-//   slidesToShow: 4,
-//   slidesToScroll: 1,
-//   asNavFor: '.slider-for',
-//   dots: false,
-//   focusOnSelect: true
-// });
-
-// $('a[data-slide]').click(function(e) {
-//   e.preventDefault();
-//   var slideno = $(this).data('slide');
-//   $('.slider-nav').slick('slickGoTo', slideno - 1);
-// });
-
 
 // Если у вас больше одного блока с фото, вам может потребоваться добавить идентификаторы или классы для точного выбора элементов.
 // В этом примере предполагается, что у вас только один блок с фото и видео.
@@ -159,3 +136,44 @@ photoBlock.addEventListener('mouseleave', function() {
       console.log('Video paused and reset');
     });
 });
+
+
+
+
+
+// cart functions
+
+
+// var productCard = document.querySelector('.product-card');
+// var image = productCard.querySelector('img');
+
+// productCard.addEventListener('mouseover', function() {
+//   image.src = './img/1_5.png';
+// });
+
+// productCard.addEventListener('mouseout', function() {
+//   image.src = './img/2.png';
+// });
+
+
+
+// Получаем ссылки на изображения иконок
+
+
+const outlineIcon = document.querySelector('.icon-heart .outline');
+const filledIcon = document.querySelector('.icon-heart .filled');
+
+// Добавляем обработчик события на клик по иконке
+outlineIcon.addEventListener('click', function() {
+      // Скрываем иконку 'outline'
+    outlineIcon.style.display = 'none';
+      // Показываем иконку 'filled'
+    filledIcon.style.display = 'inline-block';
+});
+
+filledIcon.addEventListener('click', function() {
+    filledIcon.style.display = 'none';
+    outlineIcon.style.display = 'inline-block';
+});
+
+console.log("123");
