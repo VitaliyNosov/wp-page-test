@@ -82,23 +82,7 @@ function incrementCounter() {
 }
 
 
-
-// Если у вас больше одного блока с фото, вам может потребоваться добавить идентификаторы или классы для точного выбора элементов.
-// В этом примере предполагается, что у вас только один блок с фото и видео.
-
-// const photoBlock = document.querySelector('.photo-block');
-// const video = photoBlock.querySelector('video');
-
-// photoBlock.addEventListener('mouseover', function() {
-//   video.play();
-// });
-
-// photoBlock.addEventListener('mouseout', function() {
-//   video.pause();
-//   video.currentTime = 0;
-// });
-
-
+// video play block slider
 
 
 const photoBlock = document.querySelector('.photo-block');
