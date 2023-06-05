@@ -264,23 +264,18 @@ select {
   width: 0;
   height: 1px;
   background-color: #000;
-  /* Цвет границы */
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
   transform: translateX(-50%);
 }
 .footer-menu-block a:hover::after,
 .menu-items a:hover::after {
   width: 200%;
-  /* Увеличиваем ширину на 200% */
   left: -50%;
-  /* Смещаем псевдоэлемент влево на 50% */
 }
 .footer-menu-block a:hover::before,
 .menu-items a:hover::before {
   width: 200%;
-  /* Увеличиваем ширину на 200% */
   right: -50%;
-  /* Смещаем псевдоэлемент вправо на 50% */
 }
 .footer-menu-block a::before,
 .menu-items a::before {
@@ -291,15 +286,48 @@ select {
   width: 0;
   height: 1px;
   background-color: #000;
-  /* Цвет границы */
   transition: width 0.3s ease-in-out, right 0.3s ease-in-out;
   transform: translateX(50%);
 }
 
-/* Добавляем псевдоэлемент ::after */
-/* Применяем стиль при наведении на тег <a> */
-/* Применяем стиль для псевдоэлемента при наведении на тег <a> */
-/* Добавляем дополнительный псевдоэлемент ::before */
+.checkout-button a {
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  display: inline-block;
+  color: #fff;
+}
+.checkout-button a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+.checkout-button a:hover::after {
+  width: 200%;
+  left: -50%;
+}
+.checkout-button a:hover::before {
+  width: 200%;
+  right: -50%;
+}
+.checkout-button a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out, right 0.3s ease-in-out;
+  transform: translateX(50%);
+}
+
 input {
   border: none;
   border-bottom: 1px solid #000;
@@ -593,13 +621,15 @@ input {
 }
 .block-add-cart button {
   border: none;
-  background: #1D1D1F;
+  background-color: transparent;
   color: #fff;
   font-size: 18px;
   text-transform: uppercase;
+  transition: 0.1s;
 }
 .block-add-cart button:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 .product-card img {
@@ -649,7 +679,6 @@ input {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  /* Замените на цвет прелоадера */
   z-index: 9999;
 }
 
@@ -661,7 +690,6 @@ input {
   top: -100px;
 }
 
-/* Анимация прелоадера */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -682,7 +710,6 @@ input {
   margin-left: -25px;
   border-radius: 50%;
   border: 3px solid #000;
-  /* Замените на цвет обводки прелоадера */
   border-top-color: transparent;
   animation: spin 1s linear infinite;
 }
@@ -715,6 +742,13 @@ input {
 }
 
 @media (max-width: 1225px) {
+  .dropdown {
+    overflow: hidden;
+  }
+  .dropdown select {
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+  }
   .container {
     padding: 40px;
   }
@@ -745,8 +779,7 @@ input {
   }
   nav ul a {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
   .menu-icon {
     width: 20px;
@@ -815,6 +848,13 @@ input {
   }
 }
 @media (max-width: 767px) {
+  .dropdown {
+    overflow: hidden;
+  }
+  .dropdown select {
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+  }
   .container {
     padding: 20px;
   }
@@ -855,8 +895,7 @@ input {
   }
   nav ul a {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
   .footer-block {
     display: flex;

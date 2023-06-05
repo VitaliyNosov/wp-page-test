@@ -17,27 +17,18 @@
     width: 0
     height: 1px
     background-color: #000
-
-    /* Цвет границы
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out
     transform: translateX(-50%)
 
   &:hover
     &::after
       width: 200%
-
-      /* Увеличиваем ширину на 200%
       left: -50%
-
-      /* Смещаем псевдоэлемент влево на 50%
 
     &::before
       width: 200%
-
-      /* Увеличиваем ширину на 200%
       right: -50%
 
-      /* Смещаем псевдоэлемент вправо на 50%
 
   &::before
     content: ''
@@ -47,15 +38,46 @@
     width: 0
     height: 1px
     background-color: #000
-
-    /* Цвет границы
     transition: width 0.3s ease-in-out, right 0.3s ease-in-out
     transform: translateX(50%)
 
-/* Добавляем псевдоэлемент ::after
 
-/* Применяем стиль при наведении на тег <a>
 
-/* Применяем стиль для псевдоэлемента при наведении на тег <a>
 
-/* Добавляем дополнительный псевдоэлемент ::before
+.checkout-button a
+  position: relative
+  text-decoration: none
+  overflow: hidden
+  display: inline-block
+  color: #fff
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 50%
+    width: 0
+    height: 1px
+    background-color: #fff
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out
+    transform: translateX(-50%)
+
+  &:hover
+    &::after
+      width: 200%
+      left: -50%
+
+    &::before
+      width: 200%
+      right: -50%
+
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    right: 50%
+    width: 0
+    height: 1px
+    background-color: #fff
+    transition: width 0.3s ease-in-out, right 0.3s ease-in-out
+    transform: translateX(50%)
