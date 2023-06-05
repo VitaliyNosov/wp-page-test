@@ -188,3 +188,30 @@ document.querySelectorAll('.icon-checked').forEach(function(element) {
 });
 
 
+// cart like counter
+
+let counterValue = 0;
+    
+function updateCounter(index) {
+  const counterElement = document.getElementById('counter-cart');
+  const icons = document.getElementsByClassName('icon-cart');
+
+  if (counterValue === 0) {
+    counterElement.style.display = 'block';
+  }
+
+  if (icons[index].classList.contains('active')) {
+    counterValue--;
+    icons[index].classList.remove('active');
+  } else {
+    counterValue++;
+    icons[index].classList.add('active');
+  }
+
+  counterElement.textContent = counterValue;
+
+  if (counterValue === 0) {
+    counterElement.style.display = 'none';
+  }
+}
+

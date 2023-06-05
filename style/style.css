@@ -3,6 +3,13 @@
 .icon-heart {
   width: 18.7px;
   height: 17.7px;
+  position: relative;
+}
+.icon-heart span {
+  position: absolute;
+  top: 82%;
+  left: 33%;
+  font-size: 9px;
 }
 
 .icon-bag {
