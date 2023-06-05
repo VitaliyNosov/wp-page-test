@@ -886,6 +886,10 @@ a {
   margin: 0 auto;
 }
 
+.header {
+  width: 100%;
+}
+
 .header-section {
   display: flex;
   justify-content: space-between;
