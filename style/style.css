@@ -139,7 +139,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #F6F6F6;
 }
 
 .button-block {
@@ -149,6 +148,7 @@
 .button-block button {
   border: none;
   transition: 0.3s;
+  text-transform: uppercase;
 }
 .button-block button:hover {
   background-color: #1D1D1F;
@@ -156,14 +156,18 @@
 }
 
 .dropdown {
+  margin-top: -20px;
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #F6F6F6;
+  background: linear-gradient(to right, #fff 52%, #F6F6F6 48%);
 }
 .dropdown button {
   transition: 0.3s;
   border: 1px solid black;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: 0.3s;
 }
 .dropdown button:hover {
   background-color: #F0F0F0;
@@ -174,6 +178,7 @@
   padding: 5px;
   font-size: 16px;
   margin-left: 52%;
+  margin-top: 20px;
 }
 .dropdown .button {
   transition: margin-top 0.3s ease;
@@ -240,7 +245,8 @@ select {
 }
 
 /* Применяем стили к тегу <a> */
-a {
+.footer-menu-block a,
+.menu-items a {
   position: relative;
   text-decoration: none;
   overflow: hidden;
@@ -249,7 +255,8 @@ a {
   color: black;
   padding-bottom: 5px;
 }
-a::after {
+.footer-menu-block a::after,
+.menu-items a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -261,19 +268,22 @@ a::after {
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
   transform: translateX(-50%);
 }
-a:hover::after {
+.footer-menu-block a:hover::after,
+.menu-items a:hover::after {
   width: 200%;
   /* Увеличиваем ширину на 200% */
   left: -50%;
   /* Смещаем псевдоэлемент влево на 50% */
 }
-a:hover::before {
+.footer-menu-block a:hover::before,
+.menu-items a:hover::before {
   width: 200%;
   /* Увеличиваем ширину на 200% */
   right: -50%;
   /* Смещаем псевдоэлемент вправо на 50% */
 }
-a::before {
+.footer-menu-block a::before,
+.menu-items a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -564,7 +574,7 @@ input {
 
 .price p {
   color: black;
-  font-size: 24px;
+  font-size: 18px;
   padding-left: 20px;
 }
 
@@ -586,6 +596,7 @@ input {
   background: #1D1D1F;
   color: #fff;
   font-size: 18px;
+  text-transform: uppercase;
 }
 .block-add-cart button:hover {
   cursor: pointer;
@@ -891,6 +902,13 @@ input {
     justify-content: center;
   }
 }
+::-moz-placeholder {
+  color: #D6D6D6;
+}
+::placeholder {
+  color: #D6D6D6;
+}
+
 body {
   padding: 0px;
   margin: 0px;
@@ -1066,6 +1084,7 @@ footer {
   padding: 20px;
   transition: 0.3s;
   border: 1px solid black;
+  font-size: 18px;
 }
 .form-socila-block button:hover {
   background-color: #F0F0F0;
@@ -1104,6 +1123,18 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
+}
+
+.about-us-block h3 {
+  font-weight: 400;
+}
+
+.footer-menu-block h3 {
+  font-weight: 400;
+}
+
+.form-socila-block h3 {
+  font-weight: 400;
 }
 
 .menu-icon {
