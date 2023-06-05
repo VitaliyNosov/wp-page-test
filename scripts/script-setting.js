@@ -44,7 +44,9 @@ $('.slider-for').slick({
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    prevArrow: '#your-prev-button',
+    nextArrow: '#your-next-button'
   });
   
   $('a[data-slide]').click(function(e) {
@@ -61,6 +63,8 @@ $('.slider-two').slick({
   slidesToScroll: 1,
   // autoplay: true,
   autoplaySpeed: 2000,
+  prevArrow:'#your-prev-button-two',
+  nextArrow:'#your-next-button-two'
 });
 
 

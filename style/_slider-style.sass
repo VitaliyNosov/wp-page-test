@@ -1,6 +1,7 @@
 /* Общие стили для контейнера слайдера */
 /* Общие стили для контейнера слайдера
 
+
 .main
   width: 100%
 
@@ -63,8 +64,8 @@
 
   /* Рамка активного слайда
 
-.slick-slider 
-    margin-bottom: -10px !important
+// .slick-slider 
+//     margin-bottom: -10px !important
 
 
 // slider two
@@ -87,7 +88,7 @@
 .slider-nav .slick 
   max-width: 1000px
   margin: 0 auto
-  border: 1px solid black
+  // border: 1px solid black
   overflow: hidden
   
   &-slide 
@@ -111,6 +112,70 @@
   &-list 
     margin-left: -20px
     margin-right: -20px
-  
 
 
+.slider-nav-block 
+  position: relative
+
+
+.slider-one-button-left 
+  position: absolute
+  left: -10%
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 1
+
+
+.slider-one-button-right 
+  position: absolute
+  right: -10%
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 1
+
+.slider-one-button-left 
+  img
+    &:hover
+      filter: invert(100%)
+      cursor: pointer
+
+.slider-one-button-right
+  img
+    &:hover
+      filter: invert(100%)
+      cursor: pointer
+
+
+
+  // slider two
+
+.slider-block-two
+  position: relative
+
+
+.slider-two-button-left 
+  position: absolute
+  left: -7%
+  top: 30%
+  transform: translateY(-50%)
+  z-index: 1
+
+
+.slider-two-button-right 
+  position: absolute
+  right: -7%
+  top: 30%
+  transform: translateY(-50%)
+  z-index: 1
+
+.slider-two-button-left 
+  img
+    &:hover
+      filter: invert(100%)
+      cursor: pointer
+
+.slider-two-button-right
+  img
+    &:hover
+      filter: invert(100%)
+      cursor: pointer
