@@ -208,3 +208,17 @@ function updateCounter(index) {
   }
 }
 
+
+// menu mobile
+
+document.addEventListener('DOMContentLoaded', function() {
+  var menuIcon = document.querySelector('.menu-icon');
+  var menuItems = document.querySelector('.menu-items');
+
+  menuIcon.addEventListener('click', function() {
+  // Добавляем задержку в 500 миллисекунд перед показом или скрытием блока
+  setTimeout(function() {
+  menuItems.classList.toggle('active'); // Добавляем/удаляем класс 'active'
+      }, 300);
+  });
+});
