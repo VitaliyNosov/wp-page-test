@@ -413,7 +413,10 @@ input {
 /* Стили активного навигационного слайда */
 .slick-active img {
   border: 1px solid #DFDFDF;
-  /* Рамка активного слайда */
+}
+
+.main {
+  width: 104% !important;
 }
 
 .slider {
@@ -445,7 +448,6 @@ input {
 .slider-two .slick {
   max-width: 1000px;
   margin: 0 auto;
-  border: 1px solid black;
   overflow: hidden;
 }
 .slider-two .slick-slide {
@@ -520,13 +522,14 @@ input {
   border: 1px solid #C8C8C8;
   position: relative;
   width: 600px;
+  padding-right: 1px;
   /* Задайте желаемую ширину */
   height: 600px;
   /* Задайте желаемую высоту */
   overflow: hidden;
 }
 .photo-block img {
-  width: 100%;
+  max-width: 100%;
   /* height: auto; */
   height: 100%;
 }
@@ -609,7 +612,9 @@ input {
   border: none !important;
 }
 
-#preloader {
+/* preloader */
+/* Стили для прелоадера */
+.preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -620,61 +625,43 @@ input {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
 }
 
-#logo {
-  text-align: center;
+.preloader-text {
+  font-size: 24px;
 }
-#logo img {
-  width: 200px;
-  /* Измените размеры логотипа по своему усмотрению */
-  height: auto;
+
+.hidden {
+  display: none;
+}
+
+/* Анимация появления основного контента */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Переход для плавного появления */
+.fade-in-transition {
+  animation: fade-in 1s ease-in-out;
 }
 
 #content {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in;
 }
 
-/* preloader */
-.preloader {
-  margin: 20% auto 0;
-  transform: translateZ(0);
-  border-radius: 50%;
-  width: 1.5em;
-  height: 1.5em;
-  animation: animation 1.2s infinite ease-in-out;
-  animation-delay: -0.16s;
-}
-.preloader:before, .preloader:after {
-  content: "";
-  position: absolute;
-  top: 0;
-}
-.preloader:before, .preloader:after {
-  border-radius: 50%;
-  width: 1.5em;
-  height: 1.5em;
-  animation: animation 1.2s infinite ease-in-out;
-}
-.preloader:before {
-  left: -3.5em;
-  animation-delay: -0.32s;
-}
-.preloader:after {
-  left: 3.5em;
+#content.show {
+  opacity: 1;
 }
 
-@keyframes animation {
-  0%, 80%, 100% {
-    box-shadow: 0 2em 0 -1em #333;
-  }
-  40% {
-    box-shadow: 0 2em 0 0 #333;
-  }
+.hidden {
+  display: none;
 }
+
 /* Работает в Firefox */
 * {
   scrollbar-width: thin;

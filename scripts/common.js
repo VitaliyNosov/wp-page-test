@@ -2,15 +2,24 @@ console.log('test');
 
 // preloader
 
-// window.addEventListener('load', function() {
 
-//   setTimeout(function() {
-//     document.getElementById('preloader').style.opacity = '0';
-//     document.getElementById('logo').style.display = 'block';
-//     document.getElementById('content').style.opacity = '1';
-//   }, 3000);
+  // Задержка в течение 3 секунд
+  setTimeout(function() {
+    // Скрыть прелоадер
+    var preloader = document.querySelector('.preloader');
+    preloader.style.display = 'none';
+    
+    // Отобразить основное содержимое страницы с плавным появлением
+    var content = document.querySelector('#content');
+    content.classList.remove('hidden');
+    content.classList.add('fade-in-transition');
+    
+    // Инициализировать Slick Slider после появления контента
+    var slider = document.querySelector('.slider');
+    // Ваш код инициализации Slick Slider
+  }, 3000);
 
-// });
+
 
 // select block
 
