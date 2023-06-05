@@ -94,7 +94,7 @@ function incrementCounter() {
 // video play block slider
 
 
-const photoBlock = document.querySelector('.photo-block');
+const photoBlock = document.getElementById('photo-video');
 const video = photoBlock.querySelector('video');
 
 function playVideo() {
@@ -166,6 +166,7 @@ element.addEventListener('mouseleave', function() {
   hoverImage.style.display = 'none';
   });
 });
+
 
 
 // icon checked
