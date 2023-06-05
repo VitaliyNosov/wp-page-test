@@ -46,7 +46,21 @@ $('.slider-for').slick({
     dots: false,
     focusOnSelect: true,
     prevArrow: '#your-prev-button',
-    nextArrow: '#your-next-button'
+    nextArrow: '#your-next-button',
+    responsive: [
+      {
+        breakpoint: 960, // Ширина экрана, при которой будет срабатывать адаптивность
+        settings: {
+          slidesToShow: 3 // Новое количество отображаемых слайдов для данного breakpoint
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]
   });
   
   $('a[data-slide]').click(function(e) {
@@ -64,7 +78,21 @@ $('.slider-two').slick({
   // autoplay: true,
   autoplaySpeed: 2000,
   prevArrow:'#your-prev-button-two',
-  nextArrow:'#your-next-button-two'
+  nextArrow:'#your-next-button-two',
+  responsive: [
+    {
+      breakpoint: 960, // Ширина экрана, при которой будет срабатывать адаптивность
+      settings: {
+        slidesToShow: 3 // Новое количество отображаемых слайдов для данного breakpoint
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
 });
 
 

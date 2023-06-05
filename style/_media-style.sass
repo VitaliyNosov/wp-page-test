@@ -2,9 +2,17 @@
     .container 
         padding: 40px
 
+    .product-card 
+        min-height: 395px !important
+
 @media(max-width: 970px)
     .container 
         padding: 40px
+
+    nav ul 
+        display: flex
+        justify-content: center
+        flex-direction: column
 
     .slider-price-menu-block
         display: flex
@@ -24,18 +32,41 @@
     .header-section
         display: flex
         justify-content: center
-        flex-wrap: wrap
+        flex-direction: column
 
-    .item:nth-child(1) 
-        order: 2
-    .item:nth-child(2) 
-        order: 1
+    .icon 
+        padding-top: 0 !important 
 
+    .search-container 
+        width: 10%
+        margin-bottom: 15px
+        padding-left: 2%
+
+    .icon-block-left
+        width: 100%
+        display: flex
+        justify-content: flex-start
+
+    .logo-block
+        width: 100%
+        margin-top: 5%
+        margin-bottom: 15%
+        display: flex
+        justify-content: center
+
+    .icon-block-right
+        width: 100%
+        display: flex
+        justify-content: center
 
     nav ul 
         display: flex
         justify-content: center
-        flex-wrap: wrap
+        flex-direction: column 
+        a 
+            width: 100%
+            display: flex
+            justify-content: center
 
     .footer-block
         display: flex
@@ -49,3 +80,12 @@
 
     .form-socila-block
         width: 100% !important
+
+    .photo-block
+        height: 400px !important
+
+    .product-card
+        // border: 1px solid red
+        height: 500px
+        img 
+            height: 350px !important
