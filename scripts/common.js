@@ -3,21 +3,21 @@ console.log('test');
 // preloader
 
 
-  // Задержка в течение 3 секунд
-  setTimeout(function() {
-    // Скрыть прелоадер
-    var preloader = document.querySelector('.preloader');
-    preloader.style.display = 'none';
+  // // Задержка в течение 3 секунд
+  // setTimeout(function() {
+  //   // Скрыть прелоадер
+  //   var preloader = document.querySelector('.preloader');
+  //   preloader.style.display = 'none';
     
-    // Отобразить основное содержимое страницы с плавным появлением
-    var content = document.querySelector('#content');
-    content.classList.remove('hidden');
-    content.classList.add('fade-in-transition');
+  //   // Отобразить основное содержимое страницы с плавным появлением
+  //   var content = document.querySelector('#content');
+  //   content.classList.remove('hidden');
+  //   content.classList.add('fade-in-transition');
     
-    // Инициализировать Slick Slider после появления контента
-    var slider = document.querySelector('.slider');
-    // Ваш код инициализации Slick Slider
-  }, 3000);
+  //   // Инициализировать Slick Slider после появления контента
+  //   var slider = document.querySelector('.slider');
+  //   // Ваш код инициализации Slick Slider
+  // }, 3000);
 
 
 

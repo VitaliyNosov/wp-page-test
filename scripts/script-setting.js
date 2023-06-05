@@ -22,12 +22,12 @@ $(document).ready(function() {
 
 // icon checked
 
-$('.icon-checked').click(function() {
-  var filledIcon = $(this).find('.filled');
-  var outlineIcon = $(this).find('.outline');
-  filledIcon.toggle();
-  outlineIcon.toggle();
-});
+// $('.icon-checked').click(function() {
+//   var filledIcon = $(this).find('.filled');
+//   var outlineIcon = $(this).find('.outline');
+//   filledIcon.toggle();
+//   outlineIcon.toggle();
+// });
 
 
 // slider one

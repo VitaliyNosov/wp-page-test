@@ -606,7 +606,7 @@ input {
   position: absolute;
   top: -22%;
   right: 10%;
-  z-index: 10000;
+  z-index: 10000 !important;
 }
 .icon-checked img {
   border: none !important;
