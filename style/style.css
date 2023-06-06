@@ -336,6 +336,7 @@ input {
 .search-container {
   position: relative;
   display: inline-block;
+  margin-top: 5px;
 }
 
 #search-icon {
