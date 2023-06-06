@@ -1,20 +1,5 @@
 console.log('test');
 
-// preloader
-
-
-window.addEventListener("load", function() {
-  var preloader = document.querySelector(".preloader");
-  var content = document.querySelector(".content");
-
-  setTimeout(function() {
-    preloader.style.display = "none";
-    content.classList.add("show-content");
-  }, 3000);
-});
-
-
-
 // select block
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -141,24 +126,23 @@ photoBlock.addEventListener('mouseleave', function() {
 // hover image
 
 
-document.querySelectorAll('.hover-image').forEach(function(element) {
-  element.style.display = 'none';
-  });
+document.querySelectorAll('.product-card').forEach(function(card) {
+  var mainImage = card.querySelector('img:not(.hover-image)');
+  var hoverImage = card.querySelector('.hover-image');
   
-document.querySelectorAll('.product-card-img').forEach(function(element) {
-  element.addEventListener('mouseenter', function() {
-  var hoverImage = this.querySelector('.hover-image');
-  var mainImage = this.querySelector('img:not(.hover-image)');
-  mainImage.style.display = 'none';
-  hoverImage.style.display = 'block';
-});
-  
-element.addEventListener('mouseleave', function() {
-  var hoverImage = this.querySelector('.hover-image');
-  var mainImage = this.querySelector('img:not(.hover-image)');
-  mainImage.style.display = 'block';
-  hoverImage.style.display = 'none';
-  });
+  if (mainImage && hoverImage) {
+    hoverImage.style.display = 'none';
+
+    card.addEventListener('mouseenter', function() {
+      mainImage.style.display = 'none';
+      hoverImage.style.display = 'block';
+    });
+
+    card.addEventListener('mouseleave', function() {
+      mainImage.style.display = 'block';
+      hoverImage.style.display = 'none';
+    });
+  }
 });
 
 
@@ -216,4 +200,19 @@ document.addEventListener('DOMContentLoaded', function() {
   menuItems.classList.toggle('active'); // Добавляем/удаляем класс 'active'
       }, 300);
   });
+});
+
+
+
+// preloader
+
+
+window.addEventListener("load", function() {
+  var preloader = document.querySelector(".preloader");
+  var content = document.querySelector(".content");
+
+  setTimeout(function() {
+    preloader.style.display = "none";
+    content.classList.add("show-content");
+  }, 3000);
 });
