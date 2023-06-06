@@ -949,7 +949,7 @@ input {
   }
   .product-card {
     position: relative;
-    min-height: 500px;
+    min-height: 500px !important;
     display: flex;
     flex-direction: column;
   }
