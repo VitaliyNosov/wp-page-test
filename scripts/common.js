@@ -216,3 +216,4 @@ window.addEventListener("load", function() {
     content.classList.add("show-content");
   }, 3000);
 });
+
