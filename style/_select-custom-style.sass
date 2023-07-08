@@ -1,0 +1,82 @@
+.choices
+  width: 35%
+  margin-left: auto
+  margin-right: 9%
+  margin-top: 5%
+
+
+  &.is-open
+    background-color: #F6F6F6
+    border-radius: 10px 10px 0 0
+
+.is-focused .choices__inner, .is-open .choices__inner
+  border: 1px solid black
+
+
+.choices__inner 
+    display: inline-block
+    vertical-align: top
+    width: 100%
+    border: 1px solid rgb(221, 221, 221)
+    border-radius: 2.5px
+    font-size: 14px
+    min-height: 10px
+    overflow: hidden
+
+
+.choices[data-type*=select-one]
+  &:after
+    height: 8px
+    width: 8px
+    z-index: 3
+    top: 40%
+    border: 1px solid black
+    border-width: 0 0 1px 1px
+    transform: rotate(-45deg)
+
+  &.is-open:after
+    top: 60%
+    border: 1px solid black
+    border-width: 1px 1px 0 0
+
+.choices__inner
+  width: 100%
+  position: relative
+  background-color: #F6F6F6
+  z-index: 2
+
+
+.choices__placeholder
+  opacity: 1
+
+.choices__list--dropdown
+  .choices__placeholder
+    display: none
+    top: calc(100% - 50px)
+    padding-top: 50px
+
+  .choices__item--selectable
+    padding-right: 10px
+
+    &.is-highlighted
+      background-color: black
+      color: #fff
+
+  &.is-active
+    border: 1px solid black
+    border-top-width: 0
+
+.choices__list--dropdown 
+    visibility: hidden
+    z-index: 1
+    position: absolute
+    width: 110%
+    background-color: #F6F6F6
+    border: 1px solid #ddd
+    top: 100%
+    margin-top: -1px
+    border-bottom-left-radius: 2.5px
+    border-bottom-right-radius: 2.5px
+    overflow: hidden
+    word-break: break-all
+    will-change: visibility

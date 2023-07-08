@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="slick-slider/slick.min.css">
     <link rel="stylesheet" href="slick-slider/slick-theme.min.css">
-    <!-- <link rel="stylesheet" href="style/style.css"> -->
-    <link rel="stylesheet" href="style/style-miin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- <link rel="stylesheet" href="style/style-miin.css"> -->
 </head>
 <body>
 
@@ -247,19 +248,25 @@
                           <button id="myButton" onclick="toggleElement()" class="button-action">select size</button>
                         </div>
                             <div class="dropdown">
-                              <select id="myElement" style="display: none;">
-                                <!-- Ваш список опций -->
-                                <option>L</option>
-                                <option>M</option>
-                                <option>N</option>
-                                <option>О</option>
-                                <option>P</option>
-                              </select>
+
+                                <!-- <div id="myElement" class="select-block"  style="display: none;"> -->
+
+                                    <!-- class="js-choice" - класс для select кастомная стилизация -->
+
+                                    <select id="myElement" style="display: none;">
+                                        <!-- Ваш список опций -->
+                                        <option class="select-block">L</option>
+                                        <option>M</option>
+                                        <option>N</option>
+                                        <option>О</option>
+                                        <option>P</option>
+                                    </select>
+
+                                <!-- </div> -->
+
                             <button class="button" onclick="incrementCounter()">Add to Bag</button>
                           </div>
                       </div> 
-
-
                 </div>
             </div>
         </div>
@@ -456,9 +463,10 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
     <script src="slick-slider/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
     <script src="scripts/script-setting.js"></script>
-    <!-- <script src="scripts/common.js"></script> -->
-    <script src="scripts/common.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <!-- <script src="scripts/common.min.js"></script> -->
     
 </body>
 </html>

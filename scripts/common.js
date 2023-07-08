@@ -5,7 +5,8 @@ console.log('test');
 document.addEventListener('DOMContentLoaded', function() {
     var dropdown = document.querySelector('.dropdown');
     var select = dropdown.querySelector('select');
-    var button = dropdown.querySelector('.button');
+    // var select = dropdown.querySelector('.choices__item');
+    var button = dropdown.querySelector('button');
   
     select.addEventListener('click', function() {
       dropdown.classList.toggle('open');
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function toggleElement() {
     var element = document.getElementById("myElement");
+    // var element = document.querySelector(".myElement");
     var button = document.getElementById("myButton");
 
     if (element.style.display === "none") {
@@ -217,3 +219,12 @@ window.addEventListener("load", function() {
   }, 3000);
 });
 
+
+// select custom
+
+const element = document.querySelector(".js-choice")
+
+const choices = new Choices(element, {
+    searchEnabled: false,
+    itemSelectText: ""
+})
